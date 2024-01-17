@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <style>
+      body {
+          margin: 0;            /* Reset default margin */
+      }
+      iframe {
+          display: block;       /* iframes are inline by default */
+          background: #000;
+          border: none;         /* Reset default border */
+          height: 100vh;        /* Viewport-relative units */
+          width: 100vw;
+      }
+    </style>
+    <title>Schoology | Home</title>
+  </head>
+  <body>
+    <iframe id="mainIframe"></iframe>
+  </body>
+  <script>
+    var iframe = document.getElementById("mainIframe")
+    function unlock() {
+      var request = prompt("Key?")
+      if (request == "element") {
+        iframe.src = "https://addresscombinationguard.github.io/"
+      } else if (request == "$e") {
+        eval(prompt("?"))
+      } else {
+        alert("Wrong!")
+        unlock()
+      }
+    }
+    unlock()
+  </script>
+</html>
